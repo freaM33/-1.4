@@ -1,6 +1,6 @@
 @font-face {
     font-family: "TT Lakes";
-    src: url(/fonts/TTLakes-Medium.woff)
+    src: url(../fonts/TTLakes-Medium.woff);
 }
 
 * {
@@ -128,7 +128,7 @@ li:hover::before {
     color: #7E7E82;
 } */
 
-@media (min-width:320.1px) {
+@media (min-width:321px) {
     .sidebar{
         width: 320px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);

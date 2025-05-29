@@ -6,11 +6,12 @@
 * {
     font-family: "TT Lakes", sans-serif;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     height: 100%;
-    margin: 0;
     background-color: white;
     letter-spacing: -0.2px;
     font-size: 16px;
@@ -18,93 +19,128 @@ body {
 
 .sidebar {
     width: 100%;
-    position: relative;
-	min-height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.sidebar-header{
+.sidebar-header {
     padding: 15px 0;
     display: flex;
     justify-content: space-evenly;
 }
 
-.sidebar-manu {
-    padding-bottom: 90px;
+.sidebar-menu {
+    flex: 1;
+    padding-bottom: 32px;
 }
 
-button {
+.btn {
     padding: 0;
     border: none;
     background: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
 }
 
-button > img {
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn--feedback {
+    padding-right: 16px;
+}
+
+.icon {
+    display: inline-block;
     width: 40px;
     height: 40px;
+}
+
+.icon--burger {
+    background-image: url(../img/burger.svg); 
+}
+.icon--search {
+    background-image: url(../img/search.svg); 
+}
+.icon--call {
+    background-image: url(../img/call.svg); 
+}
+.icon--chat {
+    background-image: url(../img/chat.svg); 
+}
+.icon--profile {
+    background-image: url(../img/profile.svg); 
 }
 
 .nav--brand {
     margin-right: 52px;
 }
 
-ul {
-    margin: 0 -20px;
+.menu-list {
+    list-style: none;
 }
 
-li {
-    list-style-type:none;
+.menu-item {
     padding: 16px 12px;
     font-size: 16px;
+    position: relative;
+}
+
+.menu-link {
+    color: #1B1C21;
+    text-decoration: none;
     transition: opacity 0.3s ease;
 }
 
-li:hover {
-    opacity: 0.5;
+.menu-link:hover {
+    opacity: 0.7;
 }
 
-li:hover::before {
+.menu-link:hover::before {
+    content: "";
     position: absolute;
     left: 0;
-    margin: -5px;
-    content: "";
-    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 32px;
     width: 4px;
-    border-radius: 5px;
-    border-right: 5px solid #41F6D7;
+    background-color: #41F6D7;
+    border-radius: 0 4px 4px 0;
 }
 
 .sidebar-footer {
     padding: 0 24px;
-    position: absolute;
-	bottom: 0;
 }
 
 .feedback {
     padding: 15px 0;
     display: flex;
-    justify-content: flex-start;
-}
-
-.feedback button {
-    padding-right: 16px;
+    gap: 16px;
+    align-items: center;
 }
 
 .contact-info {
     display: grid;
 }
 
-.contact-info a {
+.contact-link {
     color: #1B1C21;
     text-decoration: none;
+    transition: opacity 0.3s ease;
 }
 
-.contact-info a:first-child{
+.contact-link:hover {
+    opacity: 0.7;
+}
+
+.contact-link--email {
     line-height: 24px;
     font-size: 16px;
     letter-spacing: -0.2px;
 }
 
-.contact-info a:last-child{
+.contact-link--phone {
     line-height: 32px;
     font-size: 24px;
     letter-spacing: -0.6px;
@@ -112,27 +148,22 @@ li:hover::before {
     padding: 16px 0;
 }
 
-.language button{
-    line-height: 24px;
+.language {
+    display: flex;
+    gap: 7px;
+    padding: 32px 0;
+}
+
+.language .btn {
     font-size: 16px;
+    line-height: 24px;
     letter-spacing: -0.2px;
-    padding: 32px 7px 32px 0;
-    transition: opacity 0.3s ease;
+    color: #1B1C21;
 }
 
-.language button:hover {
-    opacity: 0.5;
-}
-
-/* .language button:first-child{
-    color: #7E7E82;
-} */
-
-@media (min-width:321px) {
-    .sidebar{
+@media (min-width: 321px) {
+    .sidebar {
         width: 320px;
         box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-        position: relative;
-        min-height: 100vh;
     }
 }

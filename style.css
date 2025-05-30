@@ -1,6 +1,6 @@
 @font-face {
     font-family: "TT Lakes";
-    src: url(/-1.4/fonts/TTLakes-Medium.woff);
+    src: url(./fonts/TTLakes-Medium.woff);
 }
 
 * {
@@ -58,19 +58,19 @@ body {
 }
 
 .icon--burger {
-    background-image: url(/-1.4/img/burger.svg); 
+    background-image: url(./img/burger.svg); 
 }
 .icon--search {
-    background-image: url(/-1.4/img/search.svg); 
+    background-image: url(./img/search.svg); 
 }
 .icon--call {
-    background-image: url(/-1.4/img/call.svg); 
+    background-image: url(./img/call.svg); 
 }
 .icon--chat {
-    background-image: url(/-1.4/img/chat.svg); 
+    background-image: url(./img/chat.svg); 
 }
 .icon--profile {
-    background-image: url(/-1.4/img/profile.svg); 
+    background-image: url(./img/profile.svg); 
 }
 
 .nav--brand {
